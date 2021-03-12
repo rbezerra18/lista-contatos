@@ -48,7 +48,8 @@ class HelperDB(
             where = "$COLUMNS_ID = ?"
             args = arrayOf("$busca")
         }else{
-            where = "$COLUMNS_NOME LIKE ?"
+            //Buscar por nome ou telefone
+            where = "$COLUMNS_NOME OR $COLUMNS_TELEFONE LIKE ?"
             args = arrayOf("%$busca%")
         }
         var cursor = db.query(TABLE_NAME,null,where,args,null,null,null)
@@ -65,7 +66,8 @@ class HelperDB(
             lista.add(contato)
         }
         db.close()
-        return lista
+        //Ordenar por ordem alfabética
+        return lista.sortedBy { it.nome }
     }
 
     fun salvarContato(contato: ContatosVO) {
