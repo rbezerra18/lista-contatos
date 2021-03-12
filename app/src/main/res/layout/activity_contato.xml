@@ -28,11 +28,12 @@
                 android:padding="16dp"
                 android:background="#616161"
                 android:orientation="vertical">
+
                 <TextView
-                    android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nome contato:"/>
+                    android:text="@string/contato_nome"
+                    android:textColor="#FFFFFF" />
 
                 <EditText
                     android:id="@+id/etNome"
@@ -48,11 +49,12 @@
                 android:layout_marginTop="16dp"
                 android:background="#616161"
                 android:orientation="vertical">
+
                 <TextView
-                    android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nome telefone:"/>
+                    android:text="@string/contato_telefone"
+                    android:textColor="#FFFFFF" />
 
                 <EditText
                     android:id="@+id/etTelefone"
@@ -62,19 +64,19 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnSalvarConato"
-                android:text="Salvar contato"
-                android:layout_marginTop="16dp"
+                android:id="@+id/btnSalvarContato"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/btnSalvarContato" />
 
             <Button
                 android:id="@+id/btnExcluirContato"
-                android:onClick="onClickExcluirContato"
-                android:text="Excluir contato"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClickExcluirContato"
+                android:text="@string/btnExcluirContato" />
         </LinearLayout>
 
     </LinearLayout>

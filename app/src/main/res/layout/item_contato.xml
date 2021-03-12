@@ -12,18 +12,20 @@
         android:padding="16dp"
         android:background="#616161"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvNome"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome contato: Teste"/>
+            android:text="@string/contato_nome"
+            android:textColor="#FFFFFF" />
+
         <TextView
             android:id="@+id/tvTelefone"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone contato: Teste"/>
+            android:text="@string/contato_telefone"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

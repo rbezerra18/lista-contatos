@@ -3,7 +3,6 @@ package com.everis.listadecontatos.feature.listacontatos
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.everis.listadecontatos.R
 import com.everis.listadecontatos.application.ContatoApplication
@@ -11,9 +10,7 @@ import com.everis.listadecontatos.bases.BaseActivity
 import com.everis.listadecontatos.feature.contato.ContatoActivity
 import com.everis.listadecontatos.feature.listacontatos.adapter.ContatoAdapter
 import com.everis.listadecontatos.feature.listacontatos.model.ContatosVO
-import com.everis.listadecontatos.singleton.ContatoSingleton
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
 
 
 class MainActivity : BaseActivity() {
@@ -68,7 +65,6 @@ class MainActivity : BaseActivity() {
                 adapter = ContatoAdapter(this,listaFiltrada) {onClickItemRecyclerView(it)}
                 recyclerView.adapter = adapter
                 progress.visibility = View.GONE
-                Toast.makeText(this,"Buscando por $busca",Toast.LENGTH_SHORT).show()
             }
         }).start()
     }

@@ -2,12 +2,12 @@ package com.everis.listadecontatos.feature.contato
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.everis.listadecontatos.R
 import com.everis.listadecontatos.application.ContatoApplication
 import com.everis.listadecontatos.bases.BaseActivity
 import com.everis.listadecontatos.feature.listacontatos.model.ContatosVO
 import kotlinx.android.synthetic.main.activity_contato.*
-import kotlinx.android.synthetic.main.activity_contato.toolBar
 
 class ContatoActivity : BaseActivity() {
 
@@ -18,7 +18,7 @@ class ContatoActivity : BaseActivity() {
         setContentView(R.layout.activity_contato)
         setupToolBar(toolBar, "Contato",true)
         setupContato()
-        btnSalvarConato.setOnClickListener { onClickSalvarContato() }
+        btnSalvarContato.setOnClickListener { onClickSalvarContato() }
     }
 
     private fun setupContato(){
@@ -61,6 +61,7 @@ class ContatoActivity : BaseActivity() {
                 finish()
             }
         }).start()
+        Toast.makeText(this,"Contato incluído/alterado!", Toast.LENGTH_SHORT).show()
     }
 
     fun onClickExcluirContato(view: View) {
@@ -74,6 +75,7 @@ class ContatoActivity : BaseActivity() {
                     finish()
                 }
             }).start()
+            Toast.makeText(this,"Contato excluído!",Toast.LENGTH_SHORT).show()
         }
     }
 }

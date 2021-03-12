@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">ListaDeContatos</string>
+    <string name="app_name">Lista de Contatos</string>
+
+    <string name="contato_nome">Nome</string>
+    <string name="contato_telefone">Telefone</string>
+
+    <string name="btnSalvarContato">Salvar - Editar</string>
+    <string name="btnExcluirContato">Excluir</string>
 </resources>
